@@ -14,7 +14,9 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons', media: 'none', onload: 'if(media!=\'all\')media=\'all\'' },
+      { rel: 'preload', href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700', media: 'none', onload: 'if(media!=\'all\')media=\'all\'' }
     ]
   },
 
@@ -27,12 +29,14 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '~/assets/sass/app.scss'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/materialize.js'
   ],
 
   /*
@@ -41,9 +45,7 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-    // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt'
+    '@nuxtjs/pwa'
   ],
   /*
   ** Axios module configuration
