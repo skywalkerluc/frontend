@@ -16,7 +16,8 @@
     "@nuxtjs/axios": "^5.0.0",
     "@nuxtjs/pwa": "latest",
     "materialize-css": "^0.100.2",
-    "nuxt": "^1.0.0"
+    "nuxt": "^1.0.0",
+    "typeface-open-sans": "0.0.54"
   },
   "devDependencies": {
     "cross-env": "^5.0.1",
