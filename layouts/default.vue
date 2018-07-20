@@ -3,14 +3,14 @@
 </template>
 
 <script>
-import 'typeface-open-sans';
+import 'typeface-fira-sans';
 export default {
 
 }
 </script>
 <style lang="scss">
 * {
-  font-family: 'Open Sans';
+  font-family: 'Fira Sans';
 }
 </style>
 
