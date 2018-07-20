@@ -31,7 +31,7 @@
         <happy-button
           slot="footer"
           type="danger"
-          label="Bem vindo ao berrepí"
+          label="Bem vindo ao Birrépi! =)"
         />
       </happy-card>
     </div>
