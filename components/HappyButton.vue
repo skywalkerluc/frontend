@@ -1,6 +1,6 @@
 <template>
   <button
-    v-ripple
+    v-ripple="'rgba(255, 255, 255, 0.15)'"
     :class="getClass">
     {{ label }}
   </button>
@@ -58,6 +58,7 @@ button {
   transition: all ease-in-out 100ms;
   font-weight: 600;
   text-transform: uppercase;
+  max-height: 36px;
 
   &:hover {
     background-color: darken(#f1f1f1, 5)
