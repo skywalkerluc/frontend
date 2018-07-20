@@ -35,19 +35,23 @@
         />
       </happy-card>
     </div>
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-      <happy-card
-        style="max-width: 32%; width: 32%; margin-right: 10px;"
-        title="Titulo do card"
-        resume="32% card size"/>
-      <happy-card
-        style="max-width: 32%; width: 32%; margin-right: 10px;"
-        title="Titulo do card"
-        resume="32% card size"/>
-      <happy-card
-        style="max-width: 32%; width: 32%;"
-        title="Titulo do card"
-        resume="32% card size"/>
+    <div style="display: flex; flex-wrap: wrap;">
+      <div style="max-width: 50%; width: 50%;">
+        <happy-card
+          style="margin-right: 10px;"
+          title="Titulo do card"
+          resume="50% card size"/>
+      </div>
+      <div style="max-width: 50%; width: 50%;">
+        <happy-card
+          title="Titulo do card"
+          resume="50% card size"/>
+      </div>
+      <div style="max-width: 50%; width: 50%;">
+        <happy-card
+          title="Titulo do card"
+          resume="50% card size"/>
+      </div>
     </div>
   </section>
 </template>
@@ -78,9 +82,11 @@ section {
 }
 .flex {
   display: flex;
+  flex-wrap: wrap;
 
   *:not(:last-child) {
     margin-right: 20px;
+    margin-bottom: 20px;
   }
 }
 </style>
