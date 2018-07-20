@@ -1,25 +1,67 @@
 <template>
   <div class="happy-card">
-    <slot name="box-1" />
-    <slot name="box-2" />
-    <slot name="box-3" />
+    <span class="happy-card--title">{{ title }}</span>
+    <div class="happy-card--content">
+      <p class="happy-card--content--resume">{{ resume }}</p>
+      <img
+        v-if="image"
+        :src="image"
+        class="happy-card--content--image"
+      >
+    </div>
+    <div class="happy-card--footer">
+      <slot name="footer"/>
+    </div>
   </div>
 </template>
 <script>
 export default {
-
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    resume: {
+      type: String,
+      default: ''
+    },
+    image: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
 .happy-card {
   padding: 20px;
-  border: 1px solid rgba(111, 109, 134, 0.25);
-  background-color: aliceblue;
+  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+  background-color: #fff;
   display: flex;
-  border-radius: 20px;
+  flex-direction: column;
+  border-radius: 5px;
 
-  * {
-    margin-right: 10px;
+  &--title {
+    font-weight: 600;
+  }
+  &--content {
+    display: flex;
+    align-items: center;
+
+    &--resume {
+      font-weight: 300;
+      flex-grow: 1;
+    }
+    &--image {
+      width: 64px;
+      height: 64px;
+      border-radius: 10px;
+    }
+  }
+  &--footer {
+    border-top: 1px solid rgba(0,0,0,.07);
+    padding-top: 20px;
+    margin-top: 20px;
   }
 }
 </style>
