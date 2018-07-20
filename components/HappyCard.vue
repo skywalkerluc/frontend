@@ -9,7 +9,9 @@
         class="happy-card--content--image"
       >
     </div>
-    <div class="happy-card--footer">
+    <div
+      v-if="$slots.footer"
+      class="happy-card--footer">
       <slot name="footer"/>
     </div>
   </div>
@@ -51,6 +53,7 @@ export default {
     &--resume {
       font-weight: 300;
       flex-grow: 1;
+      word-break: break-all;
     }
     &--image {
       width: 64px;
