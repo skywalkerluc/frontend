@@ -1,6 +1,6 @@
 # birrepi
 
-> My hunky-dory Nuxt.js project
+## Dev Url: https://berrepi-front.herokuapp.com/showcase
 
 ## Build Setup
 
