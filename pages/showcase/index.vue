@@ -1,30 +1,53 @@
 <template>
   <section>
+    <p class="label">Botões</p>
     <div class="flex">
       <happy-button
         type="danger"
-        label="Bem vindo ao berrepí"
+        label="Danger Button"
       />
       <happy-button
         type="info"
-        label="Bem vindo ao berrepí"
+        label="Info Button"
       />
       <happy-button
-        label="Bem vindo ao berrepí"
+        type="primary"
+        label="Primary Button"
+      />
+      <happy-button
+        label="Normal Button"
+      />
+      <happy-button
+        disabled
+        label="Disabled Button"
       />
     </div>
+    <p class="label">Cards</p>
     <div>
-      <happy-card >
-        <div slot="box-1">
-          <happy-button label="Confirmar"/>
-        </div>
-        <div slot="box-2">
-          <happy-button
-            type="danger"
-            label="Cancelar"
-          />
-        </div>
+      <happy-card
+        title="Titulo do card"
+        resume="ewhqoiuewhoiuwehouiqwehqowuiehqweouihweouihqew"
+        image="https://is3-ssl.mzstatic.com/image/thumb/Purple19/v4/44/d5/52/44d552f0-9ade-4714-652e-c0a9a6ef2ad7/pr_source.png/246x0w.jpg">
+        <happy-button
+          slot="footer"
+          type="danger"
+          label="Bem vindo ao berrepí"
+        />
       </happy-card>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+      <happy-card
+        style="max-width: 32%; width: 32%; margin-right: 10px;"
+        title="Titulo do card"
+        resume="32% card size"/>
+      <happy-card
+        style="max-width: 32%; width: 32%; margin-right: 10px;"
+        title="Titulo do card"
+        resume="32% card size"/>
+      <happy-card
+        style="max-width: 32%; width: 32%;"
+        title="Titulo do card"
+        resume="32% card size"/>
     </div>
   </section>
 </template>
@@ -47,11 +70,17 @@ section {
     margin-bottom: 20px;
   }
 }
+.label {
+  font-weight: 600;
+  font-size: 1.2em;
+  margin: 30px 0px;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
 .flex {
   display: flex;
 
-  * {
-    margin-right: 5px;
+  *:not(:last-child) {
+    margin-right: 20px;
   }
 }
 </style>
